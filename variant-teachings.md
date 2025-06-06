@@ -43,18 +43,22 @@ Each layer has a **clearly bounded concern** — reducing coupling and allowing 
   - Owns **persistence**.
   - Responsible for loading and saving values to disk or storage.
   - Only this layer may introduce or modify stored fields.
+  - _Data desing lives here_
 
 ### **Object Layer**
   - Owns **computed/transient fields** (e.g., `daysOld`, `isOverdue`).
   - Shapes internal logic but does not store or serialize fields.
+  - _Domain design lives here_
 
 ### **Resource Layer**
   - Owns **API shape** and **field exposure logic**.
   - Chooses which fields to show/hide, how to group them, and in what order.
+  - _User interface design lives here_
 
 ### **Message Layer**
   - Owns **serialization and encoding**.
   - Can format responses as JSON, CSV, XML, HTML, HAL, Collection+JSON, etc.
+  - _Message transfer design lives here_
 
 ### Teaching Tip:
 - Changes in one layer should never assume or require downstream compliance.
