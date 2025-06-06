@@ -43,7 +43,7 @@ Each layer has a **clearly bounded concern** — reducing coupling and allowing 
   - Owns **persistence**.
   - Responsible for loading and saving values to disk or storage.
   - Only this layer may introduce or modify stored fields.
-  - _Data desing lives here_
+  - _Data design lives here_
 
 ### **Object Layer**
   - Owns **computed/transient fields** (e.g., `daysOld`, `isOverdue`).
