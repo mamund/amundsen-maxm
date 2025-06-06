@@ -22,7 +22,7 @@ Use this as a reference when preparing lessons, designing variant exercises, or 
 
 ---
 
-## ♻️ Example: Staggered Rollouts
+### ♻️ Example: Staggered Rollouts
 
 | Layer     | Change Introduced                     | Notes                                         |
 |-----------|----------------------------------------|-----------------------------------------------|
@@ -39,20 +39,20 @@ This sequence mirrors real API rollouts — updates happen **asynchronously**, n
 
 Each layer has a **clearly bounded concern** — reducing coupling and allowing safe evolution:
 
-- **Data Layer**
+### **Data Layer**
   - Owns **persistence**.
   - Responsible for loading and saving values to disk or storage.
   - Only this layer may introduce or modify stored fields.
 
-- **Object Layer**
+### **Object Layer**
   - Owns **computed/transient fields** (e.g., `daysOld`, `isOverdue`).
   - Shapes internal logic but does not store or serialize fields.
 
-- **Resource Layer**
+### **Resource Layer**
   - Owns **API shape** and **field exposure logic**.
   - Chooses which fields to show/hide, how to group them, and in what order.
 
-- **Message Layer**
+### **Message Layer**
   - Owns **serialization and encoding**.
   - Can format responses as JSON, CSV, XML, HTML, HAL, Collection+JSON, etc.
 
@@ -62,17 +62,7 @@ Each layer has a **clearly bounded concern** — reducing coupling and allowing 
 
 ---
 
-## 🥪 Principle 3: Baselines Are Forked, Not Stacked
-
-- All `mod-*` projects start from the **same clean baseline**.
-- Changes are **not cumulative**.
-- This ensures clear, focused lessons on each individual concern.
-
-> Learners should never feel like they need to "remember the last 5 changes" — each mod is self-contained.
-
----
-
-## 🧠 Teaching Moments
+## 🧠 other Considerations
 
 - A resource model may **filter or ignore** fields it doesn’t know.
 - A message model may **choose to display** a value before or after it becomes "official".
