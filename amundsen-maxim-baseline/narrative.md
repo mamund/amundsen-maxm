@@ -1,0 +1,3 @@
+# Baseline Implementation Narrative
+
+This version represents the clean, initial implementation following Amundsen's Maxim...
