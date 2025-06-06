@@ -1,4 +1,4 @@
-# Baseline Project Narrative: Amundsen's Maxim in Practice
+# Amundsen's Maxim in Practice
 
 Welcome! This project demonstrates how to build a clean, evolvable Web API using a layered design approach grounded in [Amundsen's Maxim](https://www.amundsens-maxim.com/).
 
