@@ -1,0 +1,17 @@
+{
+  "name": "amundsen-maxim-baseline",
+  "type": "layered-api",
+  "layers": [
+    "data",
+    "object",
+    "resource",
+    "message"
+  ],
+  "entryPoint": "index.js",
+  "testCommand": "npm test",
+  "testWrapper": "./run-tests.sh",
+  "usesHypermedia": true,
+  "defaultEncoding": "HAL+JSON",
+  "maxim": "https://www.amundsens-maxim.com/",
+  "description": "A baseline implementation of a RESTful Todo API using Amundsen's Maxim. Supports independent evolution of data, object, resource, and message layers."
+}
