@@ -10,7 +10,8 @@ const {
 
 async function createTodoResource(req, res, next) {
   try {
-    validateTodoInput(req.body);
+    const { dateCreated, ...safeInput } = req.body;
+    validateTodoInput(safeInput);
     const todoObj = createTodoObject(req.body);
     const saved = await saveTodo(todoObj);
     const encoder = res.locals.encoder;
@@ -55,7 +56,8 @@ async function deleteTodoResource(req, res, next) {
 
 async function updateTodoResource(req, res, next) {
   try {
-    const updated = await updateTodoById(req.params.id, req.body);
+    const { dateCreated, ...safeInput } = req.body;
+    const updated = await updateTodoById(req.params.id, safeInput);
     if (!updated) return res.status(404).json({ error: "Not found" });
     const encoder = res.locals.encoder;
     res.json(encoder(updated, req));

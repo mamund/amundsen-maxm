@@ -5,7 +5,8 @@
   "required": [
     "id",
     "title",
-    "done"
+    "done",
+    "dateCreated"
   ],
   "properties": {
     "id": {
@@ -17,6 +18,10 @@
     },
     "done": {
       "type": "boolean"
+    },
+    "dateCreated": {
+      "type": "string",
+      "format": "date-time"
     }
   },
   "additionalProperties": true
