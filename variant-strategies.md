@@ -51,5 +51,3 @@ We're moving into the modular mutation phase of the Amundsen's Maxim project. He
 - 🧪 Keep test suite identical unless behavior changes
 - 📦 Optionally create a `mod-mixed/` variant to explore layering pitfalls and harmonization challenges
 
-Let me know when you’re ready to start building the first mod.
-
