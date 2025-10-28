@@ -82,6 +82,3 @@ Each layer has a **clearly bounded concern** — reducing coupling and allowing 
 - Encourage thoughtful team coordination without tight coupling
 
 ---
-
-Let me know if you want to turn this into a slide deck, interactive worksheet, or integrated instructor notes.
-
